@@ -32,4 +32,15 @@ public class DashboardController {
         }
     }
 
+    @FXML
+    void btnStaffInfoAction(ActionEvent event) {
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/staff.fxml"))));
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
 }
