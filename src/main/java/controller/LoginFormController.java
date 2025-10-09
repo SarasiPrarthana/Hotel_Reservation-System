@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -13,18 +14,18 @@ import java.io.IOException;
 public class LoginFormController {
 
     @FXML
-    private TextField txtPassword;
+    private TextField txtUserNameId;
 
     @FXML
-    private TextField txtUserName;
+    private PasswordField txtPasswordId;
 
     Stage stage = new Stage();
 
     @FXML
-    void btnLoginOnAction(ActionEvent event) {
+    void btnLoginAction(ActionEvent event) {
 
-        String userName = txtUserName.getText();
-        String password = txtPassword.getText();
+        String userName = txtUserNameId.getText();
+        String password = txtPasswordId.getText();
 
         if (userName.equals("Admin")){
             if(password.equals("1234")){
@@ -34,12 +35,12 @@ public class LoginFormController {
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-                txtUserName.setText("");
-                txtPassword.setText("");
+                txtUserNameId.setText("");
+                txtPasswordId.setText("");
             }else{
                 System.out.println("Invalid Password");
-                txtUserName.setText("");
-                txtPassword.setText("");
+                txtUserNameId.setText("");
+                txtPasswordId.setText("");
 
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error");
@@ -49,8 +50,8 @@ public class LoginFormController {
             }
         }else{
             System.out.println("Invalid UserName");
-            txtUserName.setText("");
-            txtPassword.setText("");
+            txtUserNameId.setText("");
+            txtPasswordId.setText("");
 
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
