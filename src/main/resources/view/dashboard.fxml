@@ -7,15 +7,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="895.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane prefHeight="647.0" prefWidth="897.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
    <children>
-      <ImageView fitHeight="646.0" fitWidth="901.0" layoutX="-5.0">
+      <ImageView fitHeight="646.0" fitWidth="907.0" layoutX="-5.0">
          <image>
             <Image url="@../images/pexels-enginakyurt-1435752.jpg" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="-2.0" prefHeight="652.0" prefWidth="876.0">
+      <AnchorPane prefHeight="646.0" prefWidth="876.0">
          <children>
             <ImageView fitHeight="500.0" fitWidth="422.0" layoutX="236.0" layoutY="76.0">
                <image>

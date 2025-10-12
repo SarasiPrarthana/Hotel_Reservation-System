@@ -12,20 +12,20 @@ public class DashboardController {
 
     Stage stage = new Stage();
     @FXML
+    void btnRoomInfoAction(ActionEvent event) {
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/room_info.fxml"))));
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    @FXML
     void btnCustomerInfoAction(ActionEvent event) {
         try {
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/customer_info.fxml"))));
-        stage.show();
-    } catch (IOException e) {
-        throw new RuntimeException(e);
-    }
-
-}
-
-@FXML
-void btnRoomInfoAction(ActionEvent event) {
-    try {
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/room_info.fxml"))));
         stage.show();
     } catch (IOException e) {
         throw new RuntimeException(e);
